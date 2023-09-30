@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Trabajadores</string>
+    <string name="txvWelcome">Bienvenido</string>
+    <string name="btnTrabajador">Agregar Trabajador</string>
+    <string name="btnlstTrabajador">Mostrar Lista</string>
+    <string name="btnAcerca">Acerca de</string>
+    <string name="txtSelect">Seleccione el tipo trabajador</string>
+    <string name="rbTH">Trabajador por hora</string>
+    <string name="rbTC">Trabajador tiempo completo</string>
+    <string name="btnNext">Siguiente</string>
+    <string name="btnAdd">Agregar</string>
+    <string name="txtRegistro">Registro</string>
+    <string name="txv_misDatos">Acerca de</string>
+    <string name="txv_desarrollador">Desarrollador</string>
+    <string name="txv_nombre">Ruth Elizabeth Vásquez Ruiz</string>
+    <string name="txv_cod">Código</string>
+    <string name="txv_codigo">VR20-I04-001</string>
+    <string name="edtTextId">Digite el Id</string>
+    <string name="edtTextN">Digite el nombre</string>
+    <string name="edtTextA">Digite el apellido</string>
+    <string name="edtTextE">Digite la edad</string>
+    <string name="edtTextV">Digite el valor de la hora</string>
+    <string name="edtTextH">Digite el número de horas</string>
+    <string name="edtTextSm">Digite el salario mensual</string>
+</resources>
