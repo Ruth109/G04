@@ -15,12 +15,14 @@ import android.widget.Toast;
 
 import com.example.g04.clases.TrabajadorHora;
 import com.example.g04.clases.TrabajadorTiempoCompleto;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class AgregarTrabajadorActivity extends AppCompatActivity {
 
-    Button btnAgregar;
-    EditText edtSalario, edtId, edtNombre, edtApellido, edtEdad, edtValor, edtHoras;
-    TextView txvSalario, txvValor, txvHoras;
+    private Button btnAgregar;
+    private TextInputEditText edtSalario, edtId, edtNombre, edtApellido, edtEdad, edtValor, edtHoras;
+    private TextInputLayout txlySalario, txlyValor, txlyHoras;
     private Bundle bundle;
     private int idEleccion;
 
@@ -42,21 +44,19 @@ public class AgregarTrabajadorActivity extends AppCompatActivity {
         edtValor = findViewById(R.id.edtValor);
         edtHoras = findViewById(R.id.edtHoras);
 
-        txvSalario = findViewById(R.id.txvSalario);
-        txvValor = findViewById(R.id.txvValor);
-        txvHoras = findViewById(R.id.txvHoras);
+        txlySalario = findViewById(R.id.txtLyoutSalario);
+        txlyValor = findViewById(R.id.txtLyoutValor);
+        txlyHoras = findViewById(R.id.txtLyoutHoras);
+
 
         bundle = getIntent().getExtras();
         idEleccion = bundle.getInt("tipoEleccion");
 
         if(idEleccion == 1){
-            txvSalario.setVisibility(View.GONE);
-            edtSalario.setVisibility(View.GONE);
+            txlySalario.setVisibility(View.GONE);
         }else{
-            txvValor.setVisibility(View.GONE);
-            edtValor.setVisibility(View.GONE);
-            txvHoras.setVisibility(View.GONE);
-            edtHoras.setVisibility(View.GONE);
+            txlyValor.setVisibility(View.GONE);
+            txlyHoras.setVisibility(View.GONE);
         }
 
         btnAgregar.setOnClickListener(view -> {
