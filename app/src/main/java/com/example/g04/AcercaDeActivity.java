@@ -5,13 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.example.g04.databinding.ActivityAcercaDeBinding;
 
 public class AcercaDeActivity extends AppCompatActivity {
+
+    private ActivityAcercaDeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acerca_de);
+        binding = ActivityAcercaDeBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -6,33 +6,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
+import com.example.g04.databinding.ActivityElegirTipoTrabajadorBinding;
+
 public class ElegirTipoTrabajadorActivity extends AppCompatActivity {
 
-    RadioButton rbTH, rbTC;
-    Button btnSiguiente;
+    private ActivityElegirTipoTrabajadorBinding binding;
     private Bundle bundle;
     private int idEleccion = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_elegir_tipo_trabajador);
+        binding = ActivityElegirTipoTrabajadorBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        rbTH = findViewById(R.id.rgTH);
-        rbTC = findViewById(R.id.rgTC);
-        btnSiguiente = findViewById(R.id.btnSiguiente);
+        binding.rgTH.setOnClickListener(v -> idEleccion =1);
+        binding.rgTC.setOnClickListener(v -> idEleccion = 2);
 
-        rbTH.setOnClickListener(view -> idEleccion =1);
-        rbTC.setOnClickListener(view -> idEleccion = 2);
-
-        btnSiguiente.setOnClickListener(view -> {
+        binding.btnSiguiente.setOnClickListener(v -> {
             bundle = new Bundle();
             bundle.putInt("tipoEleccion", idEleccion);
             Intent intent = new Intent(this, AgregarTrabajadorActivity.class);
